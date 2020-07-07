@@ -1,209 +1,98 @@
 import Head from 'next/head'
+import { Container, Row, Col, Button } from 'reactstrap';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Caroussel from '../components/Caroussel/Caroussel'
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+    <Head>
+      <title>Homepage</title>
+      <meta property="og:title" content="HomePage" key="title" />
+    </Head>
+    <div className="homepage">
+      <Row xs="1" sm="1" md="1" lg="2" className="hero">
+        <Col className="hero-image-div">
+            <img src="/images/indigo-woman.png" alt="indigo woman" title="african woman" />
+        </Col>
+          
+          <Col>
+            <div className="hero-title">
+                <h1>Bienvenue en Afrique</h1>
+                <Button>Explorez le continent</Button>
+            </div>
+           
+          </Col>
+          
+      </Row>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <div className="interets-section">
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+            <div className="section-title">
+                <h4>découvrez l'Afrique par vos intérêts</h4>
+          
+            </div>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+            <Row xs="1" sm="1" md="2" lg="4" className="interets-div">
+              <Col className="interets cuture">
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+              <LazyLoadImage
+          alt="culture image"
+          height="100%"
+          src="/svg/djembe.svg" // use normal <img> attributes as props
+          width="100%" />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+                <div className="text-div">Culture</div>
+              </Col>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+              <Col className="interets gastronomie">
+              <LazyLoadImage
+          alt="gastronomie image"
+          height="100%"
+          src="/images/food.jpg" // use normal <img> attributes as props
+          width="100%" />
+                <div className="text-div">Gastronomie</div>
+              </Col>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
+              <Col className="interets nature">
+              <LazyLoadImage
+          alt="nature image"
+          height="100%"
+          src="/images/nature.jpg" // use normal <img> attributes as props
+          width="100%" />
+                <div className="text-div">Nature</div>
+              </Col>
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+              <Col className="interets histoire">
+              <LazyLoadImage
+          alt="histoy image"
+          height="100%"
+          src="/svg/history.svg" // use normal <img> attributes as props
+          width="100%" />
+                <div className="text-div">Histoire</div>
+              </Col>
+            </Row>
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+      </div>
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      <div className="countries-section">
+          <div className="section-title">
+               <h4>explorez nos plus belles villes</h4>
+               <span>Venez explorer nos excitantes villes africaines.</span>
+          </div>
 
-        footer img {
-          margin-left: 0.5rem;
-        }
+          <div className="caroussel-div">
+              <Caroussel />
+          </div>
 
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
+      </div>
 
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
+      <div className="bio-section">
 
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      </div>
     </div>
+
+    
+   </>
   )
 }

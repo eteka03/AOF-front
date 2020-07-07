@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Mono:ital@1&display=swap');
+
+
+html{
+    
+    box-sizing: border-box;
+
+  }
+
+
+  html,body{
+      height: 100%;
+  }
+body{
+    line-height: 26px;
+    font-size: 1rem;
+font-family: 'Space Mono', monospace;
+    font-weight: normal;
+    
+   
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#__next {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/***home page ***/
+
+.homepage{
+    height: 100%;
+    width: 100%;
+    
+
+    .hero{
+           height: 80%;
+           padding-bottom: 1rem;
+           img{
+            width: 70%;
+            object-fit: contain;
+            height: 80%;
+               
+           }
+
+    }
+
+    .hero-image-div{
+        text-align: center;
+        padding: 0;
+    }
+
+    .hero-title{
+
+        text-align: center;
+       
+        h1{
+            font-weight: 600;
+           
+            word-spacing: 100vw;
+        }
+
+        h1::first-letter{
+          text-transform: uppercase;  
+          font-weight: 900;
+          font-size: 4rem;
+        }
+
+        button{
+            font-family: 'Montserrat',monospace;
+            font-weight: bold;
+            margin-top: 2rem;
+            background-color: red;
+        }
+    }
+
+    .interets-section{
+        background-color: #fdf5ee;
+        padding-top: 2rem;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 4.5rem;
+
+        .interets-div{
+            width: 100%;
+            margin: 0;
+            .interets {
+                position: relative;
+                text-align: center;
+                padding:1rem;
+                height: 350px;
+                .text-div{
+                    position: absolute; /* Position the background text */
+                    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+                    background: rgb(0, 0, 0); /* Fallback color */
+                    background: rgba(0, 0, 0, 0.95); /* Black background with 0.5 opacity */
+                    color: #f1f1f1; /* Grey text */
+                    width: 75%; /* Full width */
+                    padding: 20px; /* Some padding */
+                    height: 30%;
+                    font-size: 1.5rem;
+                    transition: height 1.5s;
+                }
+
+                .text-div:hover{
+                    height:  90%;
+                    cursor: pointer;
+                   
+                }
+                
+                .culture{
+                    
+                }
+            }
+        }
+    }
+}
+
+ .section-title{
+     padding: 1rem;
+     
+      h4{
+        text-align: center;
+          font-size: 1.5rem;
+          font-weight: 200;
+          margin-bottom: 2rem;
+      }
+      h4::first-letter{
+          text-transform: uppercase;
+          
+      }
+
+      span{
+          text-align: left;
+          font-family: monospace;
+          font-size: 1.5rem;
+          
+      }
+ }
+
+ .caroussel-div{
+     width: 100%;
+     padding:1.5rem;
+
+     div:first-child{
+        width: 95%;
+     }
+
+     .directions{
+         width: 100%;
+         display:flex;
+
+         button{
+             position: relative;
+         }
+         button:nth-child(1){
+             left: 1%;
+         }
+         button:nth-child(2){
+             left: 90%;
+         }
+     }
+ }
+
+
+
