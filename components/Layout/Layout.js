@@ -35,7 +35,9 @@ export default function Layout({
 
       <style  jsx>
         {`
-        
+          html{
+            scroll-behavior: smooth;
+          }
         `}
       </style>
     </div>

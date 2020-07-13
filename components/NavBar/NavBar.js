@@ -4,11 +4,9 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
+  
   Nav,
-  NavItem,
-  NavLink,
-  NavbarText
+ 
 } from 'reactstrap';
 
 import styles from './NavBar.module.scss'
@@ -36,9 +34,13 @@ const NavBar = (props) => {
                 <a >Hotels</a>
                 </Link>          
             
-                <Link href="/restaurants">
+                <Link href="/gastronomie">
                 <a >Restaurants</a>
-                </Link>               
+                </Link>   
+
+                <Link href="/restaurants">
+                <a >Business</a>
+                </Link>             
         
           </Nav>
           

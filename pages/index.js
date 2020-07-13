@@ -1,7 +1,11 @@
 import Head from 'next/head'
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Caroussel from '../components/Caroussel/Caroussel'
+import {Link } from 'react-scroll'
+
+
 
 export default function Home() {
   return (
@@ -19,7 +23,20 @@ export default function Home() {
           <Col>
             <div className="hero-title">
                 <h1>Bienvenue en Afrique</h1>
-                <Button>Explorez le continent</Button>
+                <Link
+                 className="link"
+                
+      to="interet"
+      
+      smooth={true}
+      spy
+      hashSpy
+      offset={50}
+      duration={500}
+      delay={1000}
+     ignoreCancelEvents={true}
+                 >
+                   Explorez le continent</Link>
             </div>
            
           </Col>
@@ -28,7 +45,7 @@ export default function Home() {
 
       <div className="interets-section">
 
-            <div className="section-title">
+            <div  className="section-title">
                 <h4>découvrez l'Afrique par vos intérêts</h4>
           
             </div>
@@ -51,7 +68,7 @@ export default function Home() {
           height="100%"
           src="/images/food.jpg" // use normal <img> attributes as props
           width="100%" />
-                <div className="text-div">Gastronomie</div>
+                <div  className="text-div">Gastronomie</div>
               </Col>
 
               <Col className="interets nature">
@@ -82,13 +99,39 @@ export default function Home() {
           </div>
 
           <div className="caroussel-div">
-              <Caroussel />
+              <Caroussel DataType="ville" />
           </div>
 
       </div>
 
-      <div className="bio-section">
+      <div className="business-section">
 
+        <div className="section-title">
+               <h4>misez sur le business en afrique</h4>
+              
+        </div>
+          <Row xs="1" sm="1" md="1" lg="2" className="business-div">
+              
+
+              <Col className="business-image">
+                <LazyLoadImage src="/images/store.png" alt="store image" title="store" />
+              </Col>
+           
+              <Col className="business-description" >
+              <h5>Achetez,supportez et Investissez sur un continent en plein essor</h5>
+              <button>Parcourir commerces locaux</button>
+              </Col>
+          </Row>
+      </div>
+
+      <div id="interet" className="covid-section element">
+          <div className="section-title">
+                  <h4>covid19 en Afrique</h4>               
+            </div>
+          <div className="covid-div">
+            <h5>Toutes vos informations sur l'évolution du covid19 sur le continent africain</h5>
+            <button>Voir infos</button>
+          </div>
       </div>
     </div>
 

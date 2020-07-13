@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
     "next": "9.4.4",
     "next-images": "^1.4.0",
@@ -15,6 +16,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "16.13.1",
     "react-lazy-load-image-component": "^1.5.0",
+    "react-scroll": "^1.7.16",
     "react-swipeable-views": "^0.13.9",
     "react-swipeable-views-utils": "^0.13.9",
     "reactstrap": "^8.5.1",
