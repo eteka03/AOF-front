@@ -4,10 +4,10 @@ import axios from 'axios'
 
 export default function Resto({data,error}) {
 
-
+console.log(data)
     return (
         <div>
-            { error?<div>une erreur</div>:data.nom }
+            { error?<div>une erreur</div>:<div>cool</div> }
         </div>
     )
 }
