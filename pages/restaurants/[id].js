@@ -7,7 +7,7 @@ export default function Resto({data,error}) {
 console.log(data)
     return (
         <div>
-            { error?<div>une erreur</div>:<div>cool</div> }
+            { error?<div>une erreur</div>:<div>{data.nom}</div> }
         </div>
     )
 }

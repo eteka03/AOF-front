@@ -21,6 +21,7 @@ export default function gastronomie({data,error}) {
         
     },[paysFilter,categorieFilter])
 
+    console.log(data)
 
   
 
