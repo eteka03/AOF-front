@@ -2,12 +2,12 @@ import React from 'react'
 
 import axios from 'axios'
 
-export default function Resto({data,error}) {
+export default function Resto({data,err}) {
 
 
     return (
         <div>
-            { error?error:data.nom }
+            { err?<div>{err.error}</div>:data.nom }
         </div>
     )
 }
@@ -27,7 +27,7 @@ export async function getStaticPaths(){
           return { paths, fallback: false }
     }catch(error){
 
-        return {error}
+        return {err:error}
     }
 
 
