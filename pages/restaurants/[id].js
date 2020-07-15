@@ -43,6 +43,7 @@ export async function getStaticPaths(){
 export async function getStaticProps({params}){
 
     try{
+        console.log(params)
         const {data} =  await axios.get(`https://allofafrica.herokuapp.com/Restaurants/${params.id}`)
 
         
