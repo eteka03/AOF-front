@@ -1,14 +1,13 @@
 import React from 'react'
-
+import {useRouter} from 'next/router'
 import axios from 'axios'
 
 export default function Resto({data,error}) {
 
-console.log("for one id",data)
-console.error("the errro",error)
+const router = useRouter()
     return (
         <div>
-            { error?<div>une erreur</div>:<div>{data.nom}</div> }
+            {router.isFallback ? <div>loading...</div> : <div>{data.nom}</div> }
         </div>
     )
 }
