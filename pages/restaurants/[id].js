@@ -4,7 +4,8 @@ import axios from 'axios'
 
 export default function Resto({data,error}) {
 
-console.log(data)
+console.log("for one id",data)
+console.error("the errro",error)
     return (
         <div>
             { error?<div>une erreur</div>:<div>{data.nom}</div> }
