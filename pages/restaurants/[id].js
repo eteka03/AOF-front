@@ -5,11 +5,15 @@ import axios from 'axios'
 export default function Resto({data,error}) {
 
 const router = useRouter()
-    return (
-        <div>
-            {router.isFallback ? <div>loading...</div> : <div>{data.nom}</div> }
-        </div>
-    )
+
+    if(router.isFallback){
+        return <div>loading...</div>
+    }else{
+        return <div>{data.nom}</div>
+    }
+    
+
+    
 }
 
 
