@@ -254,7 +254,7 @@ font-family: 'Space Mono', monospace;
 
      .hero{
          height: 75vh;
-        background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.97)), url("/images/gastro-medium.jpg");
+        background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1)), url("/images/gastro-medium.jpg");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -265,11 +265,11 @@ font-family: 'Space Mono', monospace;
         padding: 1.5rem;
 
         h2{
-            font-weight: 600;
+            font-weight: 900;
             font-size: 2.5rem;
-            letter-spacing: .2rem;
+            letter-spacing: .15rem;
             text-transform: capitalize;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         h5{
             font-family: 'Montserrat',monospace;
@@ -280,6 +280,9 @@ font-family: 'Space Mono', monospace;
     
     
  }
+
+
+ 
 
 
  .info-style{
@@ -308,51 +311,36 @@ font-family: 'Space Mono', monospace;
  }
 
 
-.filter-section{
+ .search-div{
+    padding: 2.5rem;
+    text-align: center;
+    font-family: monospace,sans-serif;
 
-  background-color: #f0eeee;
-    font-family: 'Montserrat',monospace;
-    padding: 1.3rem;
+}
 
-        h4{
-            font-weight: bold;
-        }
-        .filter{
-            margin-bottom: 1.7rem;
-            .filter-title{
-                display: block;
-                padding-bottom: .5rem;
-                font-weight: 580;
-            }
-        }
+.search-button-div{
+    width: 100%;
+    text-align: center;
+    font-family: monospace,sans-serif;
+}
 
-        .filter-div{
-            display: flex;
-            flex-direction: row;
-        
-            align-items: flex-start;
-            button{
-                margin-left: 1rem;
-                background-color: white;
-                padding: .3rem;
-                border: solid ;
-                text-align: center;
-            }
+.search-button{
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #ff0000 ;
+    border-color: #ff0000;
+    border-radius:10px ;
+    width: 40%;
+}
 
-            button:hover{
-                cursor: pointer;
-                background-color: chocolate;
-            }
+.custom-select{
+    background: #fff url("/svg/search.svg") no-repeat right .75rem center/20px 20px;
+    border-radius: 25px;
+    border-color: #000000;
+    border-width: .08rem;
+    margin-bottom: 2rem;
 
-            .button-select{
-                background-color: chocolate;
-            }
-
-            .button-not-selected{
-                background-color: #ffffff;
-            }
-        }
-        
 }
 
 
@@ -368,11 +356,132 @@ font-family: 'Space Mono', monospace;
 .restaurants-div{
     width: 100%;
     height: 100%;
-    
+    padding-top: 4rem;
 }
 
 .cuisine-local-div{
 
 }
+.avis-div{
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 500px;
+    background-image: url("/images/foodavis-large.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-attachment: fixed;;
+}
 
+
+.avis-text{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left:50%;
+    padding: 3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.avis-text h3{
+font-style: oblique;
+font-weight: 900;
+}
  
+
+.recommandation-div{
+    background-color: #eff3f3;
+    font-family: monospace,sans-serif;
+    padding: 4rem 2rem 0 2rem;
+    
+
+        h2{
+            font-weight: bold;
+            font-variant: small-caps;
+            font-size: 1.7rem;
+            margin-bottom: 2rem;
+        }
+}
+
+
+.avis{
+    background-color: #fff;
+    width: 80%;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+border-radius: 5px;
+padding:3rem;
+
+margin-bottom: 1rem;
+}
+
+
+.avis-resto-div{
+
+    padding-bottom: 1.5rem;
+
+    h5{
+        font-weight: 900;
+        font-size: 1.4rem;
+    }
+
+    span{
+        color: #808080;
+    }
+}
+
+
+.avis-client-profile{
+
+    display: flex;
+    
+
+    span{
+        margin-left: 1.5rem;
+        font-size: 1.3rem;
+
+    }
+}
+
+.avis-note{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.avis-note-moyenne-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avis-note-moyenne{
+    text-align: center;
+    border-radius: 50%;
+    border-color: #008000;
+    color: #008000;
+    border-style: solid;
+    border-width: 2px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.comment-div{
+    padding-top: 2rem;
+    h5{
+        font-weight: 500;
+    }
+}
+

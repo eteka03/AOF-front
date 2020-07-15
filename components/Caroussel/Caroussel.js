@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { useRouter, Router } from 'next/router'
 
 
 
@@ -60,6 +60,7 @@ const styles = {
 
 export default function Caroussel({data,DataType}) {
 
+  const Router = useRouter()
     const [index,setIndex] = useState(0)
     const [dataToRender,setDataToRender] = useState([])
 
@@ -93,7 +94,9 @@ export default function Caroussel({data,DataType}) {
 
 
 
-    
+    const handleRouter = (id)=>{
+      Router.push('/restaurants/[id]',`/restaurants/${id}`)
+    }
 
 
     return (
@@ -111,7 +114,7 @@ export default function Caroussel({data,DataType}) {
                 <span>{data.nom}</span>
                 <span>{data.country && data.country.nom || 'no'}</span>
                 
-                <button>Voir plus</button>
+                <button onClick={()=>{handleRouter(data.id)}}>Voir plus</button>
                   </div>
                   </div>)
                 
