@@ -42,14 +42,14 @@ export default function gastronomie({data,error}) {
                     <Row xs="1" sm="1" md="1" lg="2" className="search-div">
                         
                             <Col>
-                                <CustomInput onChange={e=>setPaysFilter(e.target.value)} bsSize="lg" type="select">
+                                <CustomInput id="1" onChange={e=>setPaysFilter(e.target.value)} bsSize="lg" type="select">
                                     <option value="initial">Choisissez pays</option>
                                     <option value="Tout">Tout</option>
                                     <option value="Burkina">Burkina Faso</option>
                                 </CustomInput> 
                             </Col>
                             <Col>
-                                <CustomInput onChange={e=>setCategorieFilter(e.target.value)} bsSize="lg" type="select">
+                                <CustomInput id="2" onChange={e=>setCategorieFilter(e.target.value)} bsSize="lg" type="select">
                                     <option value="initial">Choisissez type de cuisine</option>
                                     <option value="Tout">Tout</option>
                                     <option value="local">local</option>

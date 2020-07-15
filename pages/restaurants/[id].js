@@ -2,12 +2,12 @@ import React from 'react'
 
 import axios from 'axios'
 
-export default function Resto({data,err}) {
+export default function Resto({data,error}) {
 
 
     return (
         <div>
-            { err?<div>{err.error}</div>:data.nom }
+            { error?<div>une erreur</div>:data.nom }
         </div>
     )
 }
@@ -24,10 +24,13 @@ export async function getStaticPaths(){
             },
           }))
 
-          return { paths, fallback: false }
+         
+          return { paths , fallback:true}
     }catch(error){
-
-        return {err:error}
+        console.error(error.response.data)
+        return {
+            props:{error:error.response.data}
+        }
     }
 
 
@@ -38,12 +41,14 @@ export async function getStaticProps({params}){
     try{
         const {data} =  await axios.get(`https://allofafrica.herokuapp.com/Restaurants/${params.id}`)
 
+        
         return{
             props: {data}
         }
     }catch(error){
+        console.error(error.response.data)
         return {
-            props:{error}
+            props:{error:error.response.data}
         }
     }
 }
