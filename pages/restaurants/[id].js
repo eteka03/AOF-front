@@ -22,14 +22,15 @@ export async function getStaticPaths(){
     try{
         const {data} =  await axios.get("https://allofafrica.herokuapp.com/Restaurants")
 
-        console.log(data)
+        
         
         const paths = data.map((resto) => ({
             params: {
-                 id: resto.id
+                 id: toString(resto.id)
             },
           }))
 
+          console.log(paths)
          
           return { paths , fallback:true}
     }catch(error){
