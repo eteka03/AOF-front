@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Mono:ital@1&display=swap');
-
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 html{
     
@@ -483,5 +483,127 @@ margin-bottom: 1rem;
     h5{
         font-weight: 500;
     }
+}
+
+
+
+.page{
+
+}
+
+.side-presentation{
+    position: fixed;
+    height: 100%;
+    width:20% ;
+    z-index: -1;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    overflow-x: hidden;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 7vh;
+}
+
+
+.data-thumbnail{
+height: 200px;
+}
+
+.data-thumbnail img{
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 1px 1px 1px rgba(0,0,0,3);
+}
+
+.data-name{
+    font-weight: bold;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.data-menu{
+    text-align: center;
+    padding-top: 2rem;
+    font-weight: 500;
+    font-family: monospace,sans-serif;
+}
+
+.data-menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.data-menu ul li{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #808080;
+
+    
+}
+
+
+.data-main{
+    margin-left: 20%;
+    height: 100%;
+    padding: 0 3rem;
+    background-color: #e9e8e8 ;
+    padding:3rem;
+    font-family: monospace,sans-serif;
+}
+
+.data-infos,
+.data-photos,
+.data-avis {
+    background-color: #ffffff;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+
+    padding:2rem;
+    margin-bottom: 1rem;
+}
+
+.data-infos ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    li{
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-width: thin;
+        border-color: rgba(156, 155, 155, 0.2);
+        padding: .5rem;
+    }
+}
+
+
+.data-social{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.data-title{
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+    
 }
 
