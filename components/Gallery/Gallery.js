@@ -3,7 +3,7 @@ import ImageGallery from 'react-image-gallery'
 export default function Gallery({photos}) {
 
     const gallerie = photos.map(photo => {
-        if(photo.formats.thumbnail){
+        if(photo.formats.thumbnail && photo.formats){
             return {original:photo.url ,
                  thumbnail: photo.formats.thumbnail.url ,
                  originalAlt: photo.name,
