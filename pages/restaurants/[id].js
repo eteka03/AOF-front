@@ -18,7 +18,7 @@ const router = useRouter()
             <div className="page">
                <div className="side-presentation">
                    <div className="data-thumbnail">
-                    <LazyLoadImage src={data.photos[0].formats.small?data.photos[0].formats.small.url : data.photos[1].url } width="100%" height="100%" />
+                    <LazyLoadImage src={data.photo[0].url } width="100%" height="100%" />
                    </div>
                    <div className="data-name">
                      <span>{data.nom}</span>
