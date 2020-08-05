@@ -248,7 +248,8 @@ font-family: 'Space Mono', monospace;
  }
 
 
- .gastronomie{
+ .gastronomie,
+ .hotels{
      width: 100%;
      height: 100%;
 
@@ -345,7 +346,8 @@ font-family: 'Space Mono', monospace;
 
 
 .restaurants-div,
-.cuisine-local-div{
+.cuisine-local-div,
+.all-hotels-div{
     padding: 2rem;
 
     h4{
@@ -353,7 +355,8 @@ font-family: 'Space Mono', monospace;
         font-weight: 900;
     }
 }
-.restaurants-div{
+.restaurants-div,
+.all-hotels-div{
     width: 100%;
     height: 100%;
     padding-top: 4rem;
@@ -532,21 +535,21 @@ height: 200px;
     font-size: 1.4rem;
 }
 
-.data-menu{
+.side-menu{
     text-align: center;
     padding-top: 2rem;
     font-weight: 500;
     font-family: monospace,sans-serif;
 }
 
-.data-menu ul{
+.side-menu ul{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
 }
 
-.data-menu ul li{
+.side-menu ul li{
     margin-top: 1rem;
     font-size: 1.2rem;
     color: #808080;
@@ -566,7 +569,8 @@ height: 200px;
 
 .data-infos,
 .data-photos,
-.data-avis {
+.data-avis,
+.data-menu {
     background-color: #ffffff;
     box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -578,6 +582,7 @@ height: 200px;
 
     padding:2rem;
     margin-bottom: 1rem;
+    
 }
 
 .data-infos ul{
@@ -594,16 +599,84 @@ height: 200px;
 }
 
 
-.data-social{
+.data-social , 
+.data-services{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     
 }
 
+.data-services span{
+background-color: rgb(238, 157, 98);
+border-style: solid;
+padding:.3rem;
+border-radius: 25px;
+margin-right: 1rem;
+}
+
 .data-title{
     font-weight: bold;
     padding-bottom: 1.5rem;
+    text-align: left;
     
+}
+.data-menu{
+    padding: 1rem;
+
+}
+.data-menu ul{
+    list-style-type: none;
+}
+
+.data-menu p:first-child{
+  border-bottom-style: solid;
+  border-bottom-width: 7px;
+  border-color: red;
+  font-weight: 900;
+  
+}
+
+
+.data-menu span{
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.hotels .hero{
+    padding-top: 3.5rem;
+    text-align: center;
+    background-image: url('/images/hotel-medium.jpg');
+}
+
+.hotels .search-div{
+  
+    
+}
+
+.sketchy {
+    padding: 2rem 4rem;
+    display: inline-block;
+    border: 4px solid #333333;
+    font-size: .7rem;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+    position: relative;
+    
+    &::before {
+        content: '';
+        border: 2px solid #353535;
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+        border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    }
 }
 

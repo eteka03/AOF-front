@@ -111,7 +111,7 @@ const router = useRouter()
 export async function getStaticPaths(){
 
     try{
-        const {data} =  await axios.get("https://allofafrica.herokuapp.com/Restaurants")
+        const {data} =  await axios.get("https://allofafrica.herokuapp.com/Hotels")
 
         
         
@@ -138,7 +138,7 @@ export async function getStaticProps({params}){
 
     try{
         
-        const {data} =  await axios.get(`https://allofafrica.herokuapp.com/Restaurants/${params.id}`)
+        const {data} =  await axios.get(`https://allofafrica.herokuapp.com/Hotels/${params.id}`)
 
         
         return{

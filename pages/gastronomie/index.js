@@ -3,7 +3,6 @@ import Head from 'next/head'
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import Caroussel from '../../components/Caroussel/Caroussel'
-import FilterButton from '../../components/FilterButton/FilterButton'
 import { Row, Col,CustomInput, Button } from 'reactstrap'
 import Avis from '../../components/Avis/Avis'
 
@@ -11,9 +10,7 @@ export default function gastronomie({data,error}) {
 
     const [paysFilter,setPaysFilter] = useState(["Tout"])
     const [categorieFilter , setCategorieFilter] = useState(["Tout"])
-    const categories = ["Tout" ,"Vegetarien"]
-
-    const pays  = ["Tout" , "Burkina Faso"]
+    
 
     useEffect(()=>{
 
@@ -73,7 +70,7 @@ export default function gastronomie({data,error}) {
 
                 <div className="restaurants-div">
                     <h4>Nos meilleurs restaurants</h4>
-                    <Caroussel DataType="resto" data={data} />
+                    <Caroussel DataType="restaurants" data={data} />
                 </div>
 
                 

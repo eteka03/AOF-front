@@ -61,6 +61,7 @@ const styles = {
 export default function Caroussel({data,DataType}) {
 
   const Router = useRouter()
+    const [isLoading,setIsloading] = useState(true)
     const [index,setIndex] = useState(0)
     const [dataToRender,setDataToRender] = useState([])
 
@@ -77,11 +78,12 @@ export default function Caroussel({data,DataType}) {
 
  const   checkDataType = type => {
      
+    setIsloading(false)
       if(type === "ville"){
         setDataToRender({data:['city-1.jpg','city-2.jpg','city-3.jpg','city-4.jpg','city-5.jpg'],isImageOnly:true})
       }
       else{
-        setDataToRender(data)
+        setDataToRender({datas:data,isImageOnly:false})
       }
     }
 
@@ -94,21 +96,27 @@ export default function Caroussel({data,DataType}) {
 
 
 
-    const handleRouter = (id)=>{
-      Router.push('/restaurants/[id]',`/restaurants/${id}`)
+    const handleRouter = (id,type)=>{
+      
+      Router.push(`/${DataType}/[id]`,`/${DataType}/${id}`)
     }
 
 
     return (
         <div>
-        <SwipeableViews  style={styles.root} slideStyle={styles.slideContainer} containerStyle={styles.container} index={index} onChangeIndex={()=>setIndex(index)}>
+
+          {isLoading ? <div> chargement ...</div> 
+          
+          :
+          
+          <SwipeableViews  style={styles.root} slideStyle={styles.slideContainer} containerStyle={styles.container} index={index} onChangeIndex={()=>setIndex(index)}>
          
                 {dataToRender.isImageOnly ?
                 dataToRender.data.map(data => <div key={data} style={styles.slide1}><LazyLoadImage style={styles.imageStyle} title={data}  src={`/images/${data}`} alt={data}/></div>)
                 
                 : 
 
-                dataToRender.map(data => <div key={data.id} style={styles.slide1}>
+                dataToRender.datas.map(data => <div key={data.id} style={styles.slide1}>
                   <LazyLoadImage style={styles.dataImageStyle} title={data.name}  src={data.photos[0].url} alt={data.photos[0].name}/>
                   <div className="info-style">
                 <span>{data.nom}</span>
@@ -122,6 +130,8 @@ export default function Caroussel({data,DataType}) {
                 
                 }
         </SwipeableViews>
+          }
+        
         <div className="directions">
         <button onClick={()=>handleDirection("prev")}>prev</button>
 
