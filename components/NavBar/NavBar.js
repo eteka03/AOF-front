@@ -27,8 +27,8 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
 
-          <Link href="/destinations" passHref>        
-                <a>Destinations</a>               
+          <Link href="/tourisme" passHref>        
+                <a>Tourisme</a>               
             </Link>          
                 <Link href="/hotels">
                 <a >Hotels</a>

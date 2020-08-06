@@ -25,7 +25,7 @@ export default function gastronomie({data,error}) {
     return (
         <>
             <Head>
-            <title>Homepage</title>
+            <title>gastronomie</title>
             <meta property="og:title" content="gastronomie" key="title" />
             </Head>
 
