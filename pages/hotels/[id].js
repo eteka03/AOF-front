@@ -4,7 +4,7 @@ import axios from 'axios'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faMap, faPhoneAlt, faLink, faEnvelope, faWheelchair, faParking, faPersonBooth, faCar } from '@fortawesome/free-solid-svg-icons'
-import {faFacebook, faInstagram, faWhatsapp, faMailchimp} from '@fortawesome/free-brands-svg-icons'
+import {faFacebook, faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import Gallery from '../../components/Gallery/Gallery'
 import Avis from '../../components/Avis/Avis'
 export default function Resto({data,error}) {
