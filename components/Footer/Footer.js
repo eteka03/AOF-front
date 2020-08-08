@@ -27,7 +27,7 @@ export default function Footer() {
                    
                    <p>Tel :</p>
 
-    {allTel.map(tel => <a  href={`${tel.num}`}>{`${tel.num} (${tel.pays})`}</a>)}
+    {allTel.map(tel => <a key={tel.pays} href={`${tel.num}`}>{`${tel.num} (${tel.pays})`}</a>)}
 
                     <p>E-mail :</p>
                     <a href="mailto:alloafrica@outlook.fr">alloafrica@outlook.fr</a>
@@ -46,6 +46,9 @@ export default function Footer() {
 
 
             </Row>
+            <div className="copyright-div">
+                Tous droits réservées 2020
+            </div>
         </>
     )
 }

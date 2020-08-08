@@ -1,13 +1,21 @@
 import Head from 'next/head'
 import { Row, Col } from 'reactstrap';
-
+import React,{useRef} from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Caroussel from '../components/Caroussel/Caroussel'
-import {Link } from 'react-scroll'
+import scroller from '../functions/fn_scroller';
+import Link from 'next/link';
+import {useRouter} from 'next/router'
+
 
 
 
 export default function Home() {
+
+    const interet = useRef()
+    const router = useRouter()
+  
+    
   return (
     <>
     <Head>
@@ -23,20 +31,9 @@ export default function Home() {
           <Col>
             <div className="hero-title">
                 <h1>Bienvenue en Afrique</h1>
-                <Link
-                 className="link"
                 
-      to="interet"
-      
-      smooth={true}
-      spy
-      hashSpy
-      offset={50}
-      duration={500}
-      delay={1000}
-     ignoreCancelEvents={true}
-                 >
-                   Explorez le continent</Link>
+                <button className='link' onClick={()=>scroller(interet)}>Explorez le continent</button>
+               
             </div>
            
           </Col>
@@ -45,7 +42,7 @@ export default function Home() {
 
       <div className="interets-section">
 
-            <div  className="section-title">
+            <div ref={interet}  className="section-title">
                 <h4>découvrez l'Afrique par vos intérêts</h4>
           
             </div>
@@ -59,7 +56,7 @@ export default function Home() {
           src="/svg/djembe.svg" // use normal <img> attributes as props
           width="100%" />
 
-                <div className="text-div">Culture</div>
+               <a href="/tourisme"> <div className="text-div">Culture</div> </a>
               </Col>
 
               <Col className="interets gastronomie">
@@ -68,7 +65,7 @@ export default function Home() {
           height="100%"
           src="/images/food.jpg" // use normal <img> attributes as props
           width="100%" />
-                <div  className="text-div">Gastronomie</div>
+              <a href="/gastronomie"> <div  className="text-div">Gastronomie</div> </a> 
               </Col>
 
               <Col className="interets nature">
@@ -77,7 +74,7 @@ export default function Home() {
           height="100%"
           src="/images/nature.jpg" // use normal <img> attributes as props
           width="100%" />
-                <div className="text-div">Nature</div>
+               <a href="/tourisme"><div className="text-div">Nature</div></a>
               </Col>
 
               <Col className="interets histoire">
@@ -92,7 +89,7 @@ export default function Home() {
 
       </div>
 
-      <div className="countries-section">
+      <div  className="countries-section">
           <div className="section-title">
                <h4>explorez nos plus belles villes</h4>
                <span>Venez explorer nos excitantes villes africaines.</span>
@@ -119,12 +116,12 @@ export default function Home() {
            
               <Col className="business-description" >
               <h5>Achetez,supportez et Investissez sur un continent en plein essor</h5>
-              <button>Parcourir commerces locaux</button>
+              <button onClick={()=>router.push('/business')}>Parcourir commerces locaux</button>
               </Col>
           </Row>
       </div>
 
-      <div id="interet" className="covid-section element">
+      <div  className="covid-section element">
           <div className="section-title">
                   <h4>covid19 en Afrique</h4>               
             </div>

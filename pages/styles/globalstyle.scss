@@ -5,7 +5,7 @@ html{
     
     box-sizing: border-box;
    
-    
+    scroll-behavior: smooth;
   }
 
 
@@ -36,7 +36,7 @@ font-family: 'Space Mono', monospace;
 .homepage{
     height: 100%;
     width: 100%;
-    
+    background-color: #f5f5dc;
 
     .hero{
            height: 80%;
@@ -45,7 +45,7 @@ font-family: 'Space Mono', monospace;
             width: 70%;
             object-fit: contain;
             height: 80%;
-               
+       
            }
 
     }
@@ -854,3 +854,12 @@ height: 100%;
       color: #e2b59a;
   }
   
+
+  .copyright-div{
+    display:block;
+    width:100%;
+    text-align:center;
+    border-top-style:solid;
+    border-width:1px;
+    background-color: #000000;
+}
