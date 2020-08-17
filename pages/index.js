@@ -4,7 +4,6 @@ import React,{useRef} from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Caroussel from '../components/Caroussel/Caroussel'
 import scroller from '../functions/fn_scroller';
-import Link from 'next/link';
 import {useRouter} from 'next/router'
 
 

@@ -20,7 +20,9 @@ const NavBar = (props) => {
     <div>
       <Navbar  className={styles.customNav} light expand="md">
           <Link href="/">
-          <a>AOF</a>
+            <a>
+              <img title="logo" height="100%" width="100%" src="/images/icons/favicon-32x32.png" alt="AOF" />
+            </a>
           </Link>
         
         <NavbarToggler onClick={toggle} />

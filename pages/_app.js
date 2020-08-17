@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../pages/styles/globalstyle.scss'
 
+import moduleName from '../pages/styles/mediaqueries.css'
 
 
 function MyApp({ Component, pageProps }) {
