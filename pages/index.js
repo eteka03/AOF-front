@@ -91,7 +91,7 @@ export default function Home() {
       <div  className="countries-section">
           <div className="section-title">
                <h4>explorez nos plus belles villes</h4>
-               <span>Venez explorer nos excitantes villes africaines.</span>
+               <p>Venez explorer nos excitantes villes africaines.</p>
           </div>
 
           <div className="caroussel-div">
@@ -114,7 +114,7 @@ export default function Home() {
               </Col>
            
               <Col className="business-description" >
-              <h5>Achetez,supportez et Investissez sur un continent en plein essor</h5>
+              <p>Achetez,supportez et Investissez sur un continent en plein essor</p>
               <button onClick={()=>router.push('/business')}>Parcourir commerces locaux</button>
               </Col>
           </Row>
@@ -125,7 +125,7 @@ export default function Home() {
                   <h4>covid19 en Afrique</h4>               
             </div>
           <div className="covid-div">
-            <h5>Toutes vos informations sur l'évolution du covid19 sur le continent africain</h5>
+            <p>Toutes vos informations sur l'évolution du covid19 sur le continent africain</p>
             <button>Voir infos</button>
           </div>
       </div>

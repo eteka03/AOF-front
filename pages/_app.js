@@ -1,12 +1,16 @@
 // import App from 'next/app'
 import Layout from '../components/Layout/Layout'
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import '../pages/styles/globalstyle.scss'
+import '../pages/styles/mediaqueries.css'
+import  '@fortawesome/fontawesome-svg-core/styles.css'
+import {faMap, faPhoneAlt, faLink, faEnvelope, faWheelchair, faParking, faPersonBooth, faCar } from '@fortawesome/free-solid-svg-icons'
+import {faFacebook, faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import {config,library} from '@fortawesome/fontawesome-svg-core'
 
-import moduleName from '../pages/styles/mediaqueries.css'
+config.autoAddCss = false // Tell Font Awesome to skip adding the CSS automatically since it's being imported above
 
+library.add(faMap,faPhoneAlt,faLink,faFacebook,faWhatsapp,faInstagram,faWheelchair,faParking,faCar,faPersonBooth,faEnvelope)
 
 function MyApp({ Component, pageProps }) {
 

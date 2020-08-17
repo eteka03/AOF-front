@@ -42,10 +42,10 @@ const router = useRouter()
                             <h4 className="data-title">Informations</h4>
                             <ul>
         <li >{data.description || data.nom}</li>
-        <li><FontAwesomeIcon style={{marginRight:'.5rem'}} icon={faMap}/> {data.adresse || 'Burkina Faso'}</li>
-        <li><FontAwesomeIcon style={{marginRight:'.5rem'}} icon={faPhoneAlt}/> {data.telephone || 'Burkina Faso'}</li>
-        <li><FontAwesomeIcon style={{marginRight:'.5rem'}} icon={faEnvelope}/> {data.email || 'Aucun'}</li>
-        <li><FontAwesomeIcon style={{marginRight:'.5rem'}} icon={faLink}/> {data.lien || 'Aucun'}</li>
+        <li><FontAwesomeIcon style={{marginRight:'.5rem',fontSize:"1.2rem"}} icon={faMap}/> {data.adresse || 'Burkina Faso'}</li>
+        <li><FontAwesomeIcon style={{marginRight:'.5rem',fontSize:"1.2rem"}} icon={faPhoneAlt}/> {data.telephone || 'Burkina Faso'}</li>
+        <li><FontAwesomeIcon style={{marginRight:'.5rem',fontSize:"1.2rem"}} icon={faEnvelope}/> {data.email || 'Aucun'}</li>
+        <li><FontAwesomeIcon style={{marginRight:'.5rem',fontSize:"1.2rem"}} icon={faLink}/> {data.lien || 'Aucun'}</li>
         <li>
             <div className="data-services">
                 <span><FontAwesomeIcon  icon={faWheelchair}/> accessible</span>
@@ -55,9 +55,9 @@ const router = useRouter()
             </div>
         </li>
         <li><div className="data-social">
-               <a href="https://www.facebook.com/"><FontAwesomeIcon  style={{marginRight:'2rem'}} icon={faFacebook} size="2x" /></a> 
-               <a  href="https://www.instagram.com/"> <FontAwesomeIcon style={{marginRight:'2rem'}} icon={faInstagram} size="2x" /></a>
-              <a href="https://www.whatsapp.com/" > <FontAwesomeIcon style={{marginRight:'2rem'}} icon={faWhatsapp} size="2x" /></a>
+               <a href="https://www.facebook.com/"><FontAwesomeIcon  style={{marginRight:'2rem',fontSize:".5rem"}} icon={faFacebook}  /></a> 
+               <a  href="https://www.instagram.com/"> <FontAwesomeIcon style={{marginRight:'2rem',fontSize:".5rem"}} icon={faInstagram}  /></a>
+              <a href="https://www.whatsapp.com/" > <FontAwesomeIcon style={{marginRight:'2rem',fontSize:".5rem"}} icon={faWhatsapp}  /></a>
             </div></li>
                             </ul>
                     </div>

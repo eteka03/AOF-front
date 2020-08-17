@@ -27,11 +27,20 @@
         padding: 0 10px;
         height: 100%;
     }
+
+   
+    .directions{
+        display: none;
+    }
+  
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     
+    .directions{
+        display: none;
+    }
   }
   
   /* Medium devices (landscape tablets, 768px and up) */
@@ -62,6 +71,15 @@
         width: 40%;
         padding: 0 10px;
         height: 100%;
+    }
+
+    .covid-section .covid-div{
+        width: 50%;
+        padding: 2.5rem;
+    }
+
+    .directions{
+        display: flex
     }
   } 
   
