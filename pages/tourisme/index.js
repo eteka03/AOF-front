@@ -1,15 +1,18 @@
-import React from 'react'
+import React,{useRef,useState, useEffect} from 'react'
 import Head from 'next/head'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
 import axios from 'axios'
 import Modale from '../../components/Modal/Modal'
+import scroller from '../../functions/fn_scroller'
 
 
 
 export default function index({data,err}) {
 
     
+  const [grid,setGrid] = useState()
 
+  
     return (
         <>
         <Head>
@@ -24,6 +27,7 @@ export default function index({data,err}) {
                 <div className="tourisme-video-content">
   <h1>Quoi de plus beau que l'Afrique</h1>
   <span>Vivez votre plus belle expérience touristique </span>
+  <button className="button-style" onClick={()=>grid.scrollIntoView({behavior:'smooth',block:'start'})}>Découvrir</button>
  
 </div>
         </div>
@@ -32,8 +36,8 @@ export default function index({data,err}) {
             <div className="barniere"></div>
 
             
-            <div className="big-text">
-               Découvrez des ativités inédites 
+            <div  className="big-text">
+              <h2> Découvrez des ativités inédites </h2>
             </div>  
            
         </div>
@@ -42,7 +46,7 @@ export default function index({data,err}) {
         {
             data.length > 0 ? 
             
-                <div className="masonry datas">
+                <div ref={el => setGrid(el)} className="masonry datas">
                         {data.map(lieu =>{
                             return(
                             <div key={lieu.nom} className="grid">
@@ -51,7 +55,7 @@ export default function index({data,err}) {
                               <div className="relative">
                                 
                         <h1 className="grid__title">{lieu.nom}</h1>
-                        <p className="grid__author">{lieu.localisation || 'Burkina Faso'}</p>
+                        
                               </div>
                               <div className="mt-auto" >
                                 <Modale lieu={lieu} buttonClassName={'grid__tag'} />
@@ -62,8 +66,8 @@ export default function index({data,err}) {
                         })}
                 </div>
             :
-            <div className="masonry">
-  <div className="grid">
+            <div   className="masonry">
+  <div  className="grid">
     <LazyLoadImage src="https://source.unsplash.com/random/1"/>
     <div className="grid__body">
       <div className="relative">

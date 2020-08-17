@@ -10,7 +10,7 @@ export default function Modale({lieu,buttonClassName}) {
     const toggle = ()=>setIsopen(!isOpen)
     return (
         <div>
-             <Button className={buttonClassName} onClick={toggle}>click</Button>
+             <Button className={buttonClassName} onClick={toggle}>Voir</Button>
       <Modal isOpen={isOpen} toggle={toggle} >
     <ModalHeader toggle={toggle}>{lieu.nom}</ModalHeader>
         <ModalBody>
@@ -19,7 +19,7 @@ export default function Modale({lieu,buttonClassName}) {
         <ModalFooter>
     <p>{lieu.description || lieu.nom}</p>
     <p>{ lieu.localisation || 'Burkina Faso' }</p>
-          <Button color="secondary" onClick={toggle}>Fermer</Button>
+          <Button color="danger" onClick={toggle}>Fermer</Button>
         </ModalFooter>
       </Modal>
         </div>

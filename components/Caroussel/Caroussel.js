@@ -109,14 +109,14 @@ export default function Caroussel({data,DataType}) {
           
           :
           
-          <SwipeableViews  style={styles.root} slideStyle={{overflow: 'visible',width:''}} slideClassName={'slideParent'}  containerStyle={styles.container} index={index} onChangeIndex={()=>setIndex(index)}>
+          <SwipeableViews  style={styles.root} slideStyle={{width:''}} slideClassName={'slideParent'}  containerStyle={styles.container} index={index} onChangeIndex={()=>setIndex(index)}>
          
                 {dataToRender.isImageOnly ?
                 dataToRender.data.map(data => <div key={data} className={`slideChild`} ><LazyLoadImage style={styles.imageStyle} title={data}  src={`/images/${data}`} alt={data}/></div>)
                 
                 : 
 
-                dataToRender.datas.map(data => <div key={data.id} >
+                dataToRender.datas.map(data => <div key={data.id} className={`slideChild`} >
                   <LazyLoadImage style={styles.dataImageStyle} title={data.name}  src={data.photos[0].url} alt={data.photos[0].name}/>
                   <div className="info-style">
                 <span>{data.nom}</span>
