@@ -49,7 +49,7 @@ export default function Hotels({data}) {
                 </div>
 
                 <div className="all-hotels-div">
-                    <h4>Nos plus beaux hotels </h4>
+                    <h4>Choisissez un hôtel </h4>
                     <Caroussel DataType="hotels" data={data} />
                 </div>
             </div>

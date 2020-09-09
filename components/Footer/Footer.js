@@ -12,8 +12,8 @@ const allTel = [
         pays: 'France'
     },
     {
-        num:'+221 7780 12953',
-        pays: 'Dakar'
+        num:'+226 6401 4606',
+        pays: 'Burkina Faso'
     }
 ]
 
@@ -41,7 +41,9 @@ export default function Footer() {
                 <div className="footer-div about">
                         <h5>A propos de nous</h5>
 
-                        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at vulputate est. Donec tempor felis at nibh eleifend malesuada. Nullam suscipit lobortis aliquam. Phasellus lobortis ante lorem, vitae scelerisque lacus tempus sed. Phasellus rutrum magna</span>
+                        <span><b>All of Africa</b> est une société africaine basée au Burkina Faso. Notre objectif est de faire la promotion de la richesse culturelle de notre continent tout en mettant en valeur les acteurs
+                        qui contribuent au développement du tourisme et des affaires en Afrique.
+                        </span>
                 </div>
 
 

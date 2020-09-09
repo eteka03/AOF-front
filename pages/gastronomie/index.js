@@ -59,7 +59,7 @@ export default function gastronomie({data,error}) {
                     </Row>
 
                                 <div className="search-button-div">
-                                     <button className="search-button"  >Search</button>
+                                     <button className="search-button"  >recherche</button>
                                 </div>
                                 
                         
@@ -82,10 +82,7 @@ export default function gastronomie({data,error}) {
                 </div>
             </div>
 
-            <div className="cuisine-local-div">
-                    <h4>Nos meilleurs plats locaux </h4>
-                    <Caroussel DataType="resto" data={data} />
-                </div>
+           
 
                 <div className="recommandation-div">
                 

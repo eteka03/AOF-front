@@ -40,7 +40,7 @@ const NavBar = (props) => {
                 <a >Restaurants</a>
                 </Link>   
 
-                <Link href="/restaurants">
+                <Link href="/business">
                 <a >Business</a>
                 </Link>             
         

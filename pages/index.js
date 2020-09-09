@@ -5,11 +5,11 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Caroussel from '../components/Caroussel/Caroussel'
 import scroller from '../functions/fn_scroller';
 import {useRouter} from 'next/router'
+import axios from 'axios'
 
 
 
-
-export default function Home() {
+export default function Home({data}) {
 
     const interet = useRef()
     const router = useRouter()
@@ -55,7 +55,7 @@ export default function Home() {
           src="/svg/djembe.svg" // use normal <img> attributes as props
           width="100%" />
 
-               <a href="/tourisme"> <div className="text-div">Culture</div> </a>
+               <a href="/tourisme"> <div className="text-div">Tourisme</div> </a>
               </Col>
 
               <Col className="interets gastronomie">
@@ -64,7 +64,7 @@ export default function Home() {
           height="100%"
           src="/images/food.jpg" // use normal <img> attributes as props
           width="100%" />
-              <a href="/gastronomie"> <div  className="text-div">Gastronomie</div> </a> 
+              <a href="/gastronomie"> <div  className="text-div">Restaurants</div> </a> 
               </Col>
 
               <Col className="interets nature">
@@ -73,7 +73,7 @@ export default function Home() {
           height="100%"
           src="/images/nature.jpg" // use normal <img> attributes as props
           width="100%" />
-               <a href="/tourisme"><div className="text-div">Nature</div></a>
+               <a href="/hotels"><div className="text-div">Hotels</div></a>
               </Col>
 
               <Col className="interets histoire">
@@ -82,7 +82,7 @@ export default function Home() {
           height="100%"
           src="/svg/history.svg" // use normal <img> attributes as props
           width="100%" />
-                <div className="text-div">Histoire</div>
+              <a href="/business"> <div className="text-div">Business</div> </a> 
               </Col>
             </Row>
 
@@ -90,12 +90,12 @@ export default function Home() {
 
       <div  className="countries-section">
           <div className="section-title">
-               <h4>explorez nos plus belles villes</h4>
-               <p>Venez explorer nos excitantes villes africaines.</p>
+               <h4>Nos suggestions</h4>
+               <p>Découvrez nos coups de coeur en hotelerie</p>
           </div>
 
           <div className="caroussel-div">
-              <Caroussel DataType="ville" />
+          <Caroussel DataType="hotels" data={data} />
           </div>
 
       </div>
@@ -134,4 +134,27 @@ export default function Home() {
     
    </>
   )
+}
+
+
+export async  function getStaticProps(){
+
+  try{
+    const {data} =  await axios.get("https://allofafrica.herokuapp.com/Hotels")
+     
+    return {
+        props:{
+            data
+        }
+    }
+}
+catch(error){
+
+return{
+   
+        props:{err:"une erreur"}
+    
+}
+
+}
 }

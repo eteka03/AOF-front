@@ -3,7 +3,7 @@ import Head from 'next/head'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
 import axios from 'axios'
 import Modale from '../../components/Modal/Modal'
-import scroller from '../../functions/fn_scroller'
+
 
 
 

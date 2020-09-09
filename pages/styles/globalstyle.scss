@@ -156,21 +156,23 @@ font-family: 'Space Mono', monospace;
      padding:1.5rem;
 
 
-     .directions{
-         width: 100%;
-        
-
-         button{
-             position: relative;
-         }
-         button:nth-child(1){
-             left: 1%;
-         }
-         button:nth-child(2){
-             left: 90%;
-         }
-     }
+     
  }
+
+ .directions{
+    width: 100%;
+   
+
+    button{
+        position: relative;
+    }
+    button:nth-child(1){
+        left: 1%;
+    }
+    button:nth-child(2){
+        left: 90%;
+    }
+}
 
 
  .business-section{
