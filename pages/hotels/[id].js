@@ -55,9 +55,9 @@ const router = useRouter()
             </div>
         </li>
         <li><div className="data-social">
-               <a href="https://www.facebook.com/"><FontAwesomeIcon  style={{marginRight:'2rem',fontSize:".5rem"}} icon={faFacebook}  /></a> 
-               <a  href="https://www.instagram.com/"> <FontAwesomeIcon style={{marginRight:'2rem',fontSize:".5rem"}} icon={faInstagram}  /></a>
-              <a href="https://www.whatsapp.com/" > <FontAwesomeIcon style={{marginRight:'2rem',fontSize:".5rem"}} icon={faWhatsapp}  /></a>
+               <a href="https://www.facebook.com/"><FontAwesomeIcon  style={{marginRight:'2rem',fontSize:"2rem"}} icon={faFacebook}  /></a> 
+               <a  href="https://www.instagram.com/"> <FontAwesomeIcon style={{marginRight:'2rem',fontSize:"2rem"}} icon={faInstagram}  /></a>
+              <a href="https://www.whatsapp.com/" > <FontAwesomeIcon style={{marginRight:'2rem',fontSize:"2rem"}} icon={faWhatsapp}  /></a>
             </div></li>
                             </ul>
                     </div>

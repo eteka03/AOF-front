@@ -22,6 +22,8 @@
     border-style: solid;
     }
 
+    
+
     .slideParent{
         width: 90%;
         padding: 0 10px;
@@ -33,12 +35,19 @@
     .directions{
         display: none;
     }
+
+    .side-presentation{
+        display: none;
+    }
   
   }
   
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     
+    .side-presentation{
+        display: none;
+    }
     .directions{
         display: none;
     }
@@ -59,10 +68,24 @@
             padding: 0 10px;
             height: 100%;
         }
+
+        
+
+        
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
+
+    .side-presentation{
+        display: flex;
+    }
+
+    .data-main{
+        margin-left: 20%;
+        padding: 0 3rem;
+        padding:3rem;
+    }
     .slideChild {
         
     width:100%;
